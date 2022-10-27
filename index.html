@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Mon Portfolio</title>
+
+		<!-- Liens d'intégration de style css Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"/>
+
+		<!-- Liens d'intégration d'icônes Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+
+		<!-- Liens d'intégration de mon style css -->
+		<link
+			rel="stylesheet"
+			href="css/style.css"/>
+	</head>
+	<body class="bg-dark bg-gradient d-flex flex-column min-vh-100" >
+
+		<!-- Photo de Profil -->
+		<div>
+			<img
+				src="Images/Photo.jpg"
+				class="img-fluid rounded-circle mx-auto d-block"
+				alt="Photo"
+				width="20%"/>
+		</div>
+
+		<!-- Titre de page -->
+		<div class="Homepage">
+			<div class="title">
+				<h1>Jérôme Hussenet</h1>
+			</div>
+		</div>
+		<br />
+		<!-- Colonnes avec liens alignés -->
+		<div class="container-fluid">
+			<div class="row" id="row-icon">
+				<div class="col">
+					<!-- Lien et icone redirigeant vers mon Linkedin -->
+					<a href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-hussenet-a77873253/">
+						<i class="bi bi-linkedin" id="icon"></i>
+					</a>
+				</div>
+				<div class="col">
+					<!-- Lien et icone redirigeant vers mon GitHub -->
+					<a href="https://github.com/StratiX0">
+						<i class="bi bi-github" id="icon"></i>
+					</a>
+				</div>
+				<div class="col">
+					<!-- Lien et icone redirigeant vers mon Twitter -->
+					<a href="https://twitter.com/StratiX6">
+						<i class="bi bi-twitter" id="icon"></i>
+					</a>
+				</div>
+				<div class="col">
+					<!-- Lien et icone redirigeant vers mon Instagram -->
+					<a href="https://www.instagram.com/jerome_hst/">
+						<i class="bi bi-instagram" id="icon"></i>
+					</a>
+				</div>
+				<div class="col">
+					<!-- Lien et icone regidirigeant vers la page contact en php -->
+					<a href="index.php">
+						<i class="bi bi-person-lines-fill" id="icon"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<br />
+		<!-- Ligne de plusieurs cartes s'adaptant à la taille de l'écran -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- Carte sur mes informations -->
+					<div class="card mx-auto mb-3 text-light" id="main-color" style="width: 100%">
+						<div class="card-header">
+							<h2><i class="bi bi-person-circle"></i> Informations</h2>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								<h4><i class="bi bi-briefcase-fill" id="mini-icon"></i> Étudiant</h4>
+							</li>
+							<li class="list-group-item">
+								<h4><i class="bi bi-geo-fill" id="mini-icon"></i> Amblainville, France</h4>
+							</li>
+							<li class="list-group-item">
+								<h4><i class="bi bi-envelope-fill" id="mini-icon"></i> jhussenet@gaming.tech</h4>
+							</li>
+							<li class="list-group-item">
+								<h4><i class="bi bi-phone-fill" id="mini-icon"></i> +33 06 28 90 26 33</h4>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<!-- Carte avec liste sur ma formation -->
+					<div class="card text-light mx-auto mb-3" id="main-color" style="width: 100%">
+						<div class="card-header">
+							<h2><i class="bi bi-briefcase-fill"></i> Formation</h2>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								<h5>Collège Françoise Sagan</h5>
+								<p><i class="bi bi-calendar-fill" id="mini-icon"></i> 2015 - 2019</p>
+							</li>
+							<li class="list-group-item">
+								<h5>Lycée Condorcet</h5>
+								<p><i class="bi bi-calendar-fill" id="mini-icon"></i> 2019 - 2022</p>
+							</li>
+							<li class="list-group-item">
+								<h5>Gaming Campus</h5>
+								<p>
+									<i class="bi bi-calendar-fill" id="mini-icon"></i> 2022 -
+									<button class="btn px-3 py-0" id="btn">Actuel</button>
+									<p>Bachelor Développeur Informatique, option Jeu Vidéo</p>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<!-- Carte avec liste sur mes langues parlées -->
+					<div class="card mx-auto mb-3 text-light" id="main-color" style="width: 100%">
+						<div class="card-header">
+							<h2><i class="bi bi-flag-fill"></i> Langues</h2>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								<h5>Français</h5>
+								<div class="progress rounded-pill" style="height: 20px">
+									<div class="progress-bar-fr">
+										<p class="text-center">Maternel</p>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<h5>Anglais</h5>
+								<div class="progress rounded-pill" style="height: 20px">
+									<div class="progress-bar-eng">
+										<p class="text-center">Niveau C1</p>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<h5>Allemand</h5>
+								<div class="progress rounded-pill" style="height: 20px">
+									<div class="progress-bar-ger">
+										<p class="text-center">Niveau B2</p>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<h5>Japonais</h5>
+								<div class="progress rounded-pill" style="height: 20px">
+									<div class="progress-bar-jp">
+									</div>
+									<p class="text-center">Débutant</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+				<!-- Carte sur mes informations personnelles -->
+			<div class="card mx-auto mb-3" id="main-color" style="width: 100%;">
+				<div class="card-header">
+					<h2 class="text-white"><i class="bi bi-joystick"></i> A propos de moi</h2>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<h5>Salut !</h5>
+						<p>Je m'appelle Jérôme Hussenet, j'ai 18 ans et je suis actuellement étudiant au Gaming Campus de Paris.</p>
+						<p>Je suis étudiant en GTECH en vue d'obtenir un Bachelor Développeur Informatique option Jeu Vidéo.</p>
+						<p>J'ai décidé de poursuivre ces études, car d'aussi longtemps que je m'en souvienne, j'ai toujours joué aux jeux vidéo. Il est donc tout naturel pour moi que je poursuive des études en rapport avec ceux-ci.</p>
+						<p>Parmi mes jeux vidéo préférés se trouvent entre autres CS:GO, Apex Legends, l'IP Need for Speed, les jeux vidéo ne sont cependant pas ma seule passion, j'adore le sport automobile, le tennis, les films, la musique (électronique surtout). Peut-être que vous me permettrez d'en découvrir bien d'autres !</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- Informations sur la création de la page -->
+		<footer class="text-center" id="main-color">
+			<h5>2022 - Jérôme Hussenet</h5><a href="admin_login.php">
+				admin
+			</a>
+		</footer>
+	</body>
+</html>

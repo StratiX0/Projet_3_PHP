@@ -1,0 +1,79 @@
+.bg-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.img-responsive .centree {
+	margin: 0 auto;
+}
+.col {
+	font-size: 3em;
+	max-width: 2em;
+	margin: auto;
+}
+.text-center {
+	color: whitesmoke;
+}
+.list-group-item {
+	font-size: 20px;
+	background-color: dimgrey;
+	color: whitesmoke;
+}
+.rounded-pill {
+	background-color: rgb(175, 175, 175);
+}
+.progress-bar-fr {
+	background-color: orange;
+	height: 100%;
+	width: 100%;
+}
+.progress-bar-eng {
+	background-color: orange;
+	height: 100%;
+	width: 85%;
+}
+.progress-bar-ger {
+	background-color: orange;
+	height: 100%;
+	width: 50%;
+}
+.progress-bar-jp {
+	background-color: orange;
+	height: 100%;
+	width: 2%;
+}
+
+#icon {
+	color: orange;
+}
+
+#icon:hover {
+	color: darkorange;
+}
+#mini-icon {
+	color: orange;
+}
+
+#btn {
+	background-color: orange;
+	color: whitesmoke;
+}
+
+#btn:hover {
+	background-color: darkorange;
+}
+
+#main-color {
+	background-color: dodgerblue;
+}
+
+h1 {
+	color: whitesmoke;
+	text-align: center;
+}
+
+#row-icon {
+	margin: auto;
+	width: 500px;
+}
+

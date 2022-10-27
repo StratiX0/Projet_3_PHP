@@ -1,0 +1,46 @@
+h1 {
+	margin-top: 200px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+}
+
+.log {
+	margin: auto;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: x-large;
+}
+
+#nom,
+#prenom,
+#mail,
+#mdp,
+#tel {
+	text-align: center;
+	border-radius: 10px;
+	background-color: rgb(150, 150, 150);
+}
+
+#nom:focus,
+#prenom:focus,
+#mail:focus,
+#mdp:focus,
+#tel:focus {
+	color: white;
+}
+
+::placeholder {
+	color: white;
+}
+
+#btn {
+	background-color: rgb(150, 150, 150);
+	color: white;
+}
