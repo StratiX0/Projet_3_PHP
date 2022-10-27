@@ -17,7 +17,12 @@
     <link rel="stylesheet" href="css/admin.css"/>
     <title>Admin</title>
 </head>
-<body class="bg-dark bg-gradient d-flex flex-column min-vh-100" >
+<body class="d-flex flex-column min-vh-100" >
+
+    <video autoplay muted loop preload id="bgVideo">
+  		<source src="video/adminBG.mp4" type="video/mp4">
+	</video>
+    
     <?php
 
     $pdo = new PDO('mysql:host=localhost;dbname=gtech', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
@@ -25,6 +30,8 @@
     $d = $pdo->query($query);
 
     ?>
+
+
 
     <table class="table">
         <thead>
@@ -42,7 +49,7 @@
         foreach($d as $data)
         {
         ?>
-        <tr>
+        <tr class="content">
             <td id="col1"><?php echo $data['id']; ?></td>
             <td><?php echo $data['nom']; ?></td>
             <td><?php echo $data['prenom']; ?></td>

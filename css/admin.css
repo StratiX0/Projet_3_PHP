@@ -8,11 +8,11 @@ body {
 }
 
 thead {
-	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.75);
 }
 
 #col1 {
-	background-color: rgb(30, 30, 30);
+	background-color: rgba(30, 30, 30, 0.35);
 }
 
 th {
@@ -24,10 +24,23 @@ th {
 	font-weight: 900;
 }
 
+.content {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
 td {
 	border-width: 2px;
 	border-style: solid;
 	border-color: rgb(150, 150, 150);
 	width: 10%;
 	color: white;
+}
+
+#bgVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
 }

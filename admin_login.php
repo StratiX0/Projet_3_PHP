@@ -19,7 +19,7 @@
 			</style>
 <title>Admin Login</title>
 </head>
-<!-- class="bg-dark bg-gradient d-flex flex-column min-vh-100" -->
+
 <body>
 
 	<video autoplay muted loop preload id="bgVideo">
@@ -38,7 +38,7 @@
 		<br><br>
 		<input type="password" placeholder= "Mot de passe" name="motdepasse" id="mdp" required></input>
 		<br><br>
-		<button type="text" name="post" id="btn"><i class="bi bi-box-arrow-in-right"> Se connecter </i><i class="bi bi-box-arrow-in-left"></i></button>
+		<button type="text" name="post" id="btn"> <i class="bi bi-box-arrow-in-right"></i> Se connecter <i class="bi bi-box-arrow-in-left"></i> </button>
 		</form>
 	</div>
 
