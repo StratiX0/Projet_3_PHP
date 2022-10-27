@@ -24,7 +24,7 @@
   	<source src="video/indexPHP.mp4" type="video/mp4">
 	</video>
 
-  <div class="title">
+  <div class="title position-absolute top-0 start-50 translate-middle-x">
     <h1>Vos informations</h1>
   </div>
 
