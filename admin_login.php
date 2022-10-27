@@ -26,7 +26,7 @@
   		<source src="video/Admin_loginBG.mp4" type="video/mp4">
 	</video>
 	
-	<div class="title position-absolute top-0 start-50 translate-middle">
+	<div class="title position-absolute top-0 start-50 translate-middle-x">
 		<h1>Page Admin</h1>
 	</div>
 
@@ -42,7 +42,48 @@
 		</form>
 	</div>
 
+	<div class="disclaimer position-absolute bottom-0 start-50 translate-middle-x"><p>2022 - Page dédiée uniquement aux ADMINS</p></div>
 
+
+
+
+
+	<?php
+
+		include_once('connection.php');
+
+		function test_input($data) {
+			
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			
+			$username = test_input($_POST["identifiant"]);
+			$password = test_input($_POST["motdepasse"]);
+			$stmt = $conn->prepare("SELECT * FROM admin");
+			$stmt->execute();
+			$users = $stmt->fetchAll();
+			
+			foreach($users as $user) {
+				
+				if(($user['identifiant'] == $username) &&
+					($user['motdepasse'] == $password)) {
+						header("location: admin.php");
+				}
+				else {
+					echo "<script language='javascript'>";
+					echo "alert('Informations invalides !')";
+					echo "</script>";
+					die();
+				}
+			}
+		}
+
+	?>
 
 </body>
 </html>
@@ -51,42 +92,7 @@
 
 
 
-<?php
 
-include_once('connection.php');
-
-function test_input($data) {
-	
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	return $data;
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	
-	$username = test_input($_POST["identifiant"]);
-	$password = test_input($_POST["motdepasse"]);
-	$stmt = $conn->prepare("SELECT * FROM admin");
-	$stmt->execute();
-	$users = $stmt->fetchAll();
-	
-	foreach($users as $user) {
-		
-		if(($user['identifiant'] == $username) &&
-			($user['motdepasse'] == $password)) {
-				header("location: admin.php");
-		}
-		else {
-			echo "<script language='javascript'>";
-			echo "alert('Informations invalides !')";
-			echo "</script>";
-			die();
-		}
-	}
-}
-
-?>
 
 
 

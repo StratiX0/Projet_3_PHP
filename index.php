@@ -17,9 +17,18 @@
 		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
   <title>Contact</title>
 </head>
-<body class="bg-dark bg-gradient d-flex flex-column min-vh-100">
-  <h1>Vos informations</h1>
-  <div class="log">
+
+<body>
+
+  <video autoplay muted loop preload id="bgVideo">
+  	<source src="video/indexPHP.mp4" type="video/mp4">
+	</video>
+
+  <div class="title">
+    <h1>Vos informations</h1>
+  </div>
+
+  <div class="log position-absolute top-50 start-50 translate-middle">
       <!-- Formulaire -->
     <form action="" method="post">
       <input type="text" placeholder= "Nom" id="nom" name="nom" required></input>
@@ -55,6 +64,7 @@
       $tel = $_POST['telephone'];
         
         //Valider le nom
+      echo "<div class='confirmation position-absolute top-50 end-0 translate-middle-y'>";
       if(preg_match('#^(?=.*[a-z])(?=.*[A-Z])#', $nom)){
           echo "Le nom est conforme";
           $validenom = 1;    //Contient vrai puisque c'est conforme
@@ -80,7 +90,6 @@
           $valideprenom = 0;    //Contient faux puisque ce n'est pas conforme
           echo"<br><br>";
         }
-
 
         //Valider l'email
       if(filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -118,32 +127,35 @@
           echo 'Numéro de téléphone non conforme';
           $validetel = 0;    //Contient faux puisque ce n'est pas conforme
           echo"<br><br>";
-        }	
+        }      
+      echo"</div>";	
 }
 
-        //Vérification du post, de la validité du mot de passe, de l'email et du numéro de téléphone
-      if($_POST && $validemdp && $validemail && $validetel && $validenom && $valideprenom) {
-            //Affiche le nom
+      //        // Non utilisé par moi - utilisable pour debug
+      //        //Vérification du post, de la validité du mot de passe, de l'email et du numéro de téléphone
+      // if($_POST && $validemdp && $validemail && $validetel && $validenom && $valideprenom) {
+      //        //Affiche le nom
+      //   echo $nom;
+      //   echo"<br><br>";
 
-        echo $nom;
-        echo"<br><br>";
+      //        //Affiche le prénom
 
-            //Affiche le prénom
+      //   echo $prenom;
+      //   echo"<br><br>";
 
-        echo $prenom;
-        echo"<br><br>";
+      //        //Affiche l'email
+      //   echo $email;
+      //   echo"<br><br>";
 
-            //Affiche l'email
-        echo $email;
-        echo"<br><br>";
+      //        //Affiche le téléphone
+      //   echo $tel;
+      //   echo"<br><br>";
 
-            //Affiche le téléphone
-        echo $tel;
-        echo"<br><br>";
+      //        //Affiche le mot de passe hasher
+      //   echo $passwordhash;
+      //   }
+	
 
-            //Affiche le mot de passe hasher
-        echo $passwordhash;
-        }
   ?>
 
   <?php
