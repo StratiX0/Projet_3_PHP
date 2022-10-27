@@ -10,41 +10,52 @@
 		rel="stylesheet"
 		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
 		crossorigin="anonymous"/>
-  <link href="css/index_php.css" rel="stylesheet"/>
   	<!-- Liens d'intégration d'icônes Bootstrap -->
   <link
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+    <!-- Intégration de la feuille de style css -->
+  <link href="css/index_php.css" rel="stylesheet"/>
   <title>Contact</title>
 </head>
 
 <body>
 
+    <!-- Importation de la vidéo d'arrière plan -->
   <video autoplay muted loop preload id="bgVideo">
   	<source src="video/indexPHP.mp4" type="video/mp4">
 	</video>
 
+    <!-- Titre -->
   <div class="title position-absolute top-0 start-50 translate-middle-x">
     <h1>Vos informations</h1>
   </div>
 
+    <!-- Div incluant le formulaire avec la position bootstrap -->
   <div class="log position-absolute top-50 start-50 translate-middle">
       <!-- Formulaire -->
     <form action="" method="post">
+        <!-- Input du Nom -->
       <input type="text" placeholder= "Nom" id="nom" name="nom" required></input>
       <br><br>
+        <!-- Input du prénom -->
       <input type="text" placeholder= "Prénom" id="prenom" name="prenom" required></input>
       <br><br>
+        <!-- Input de l'email -->
       <input type="text" placeholder= "Email" id="mail" name="email" required></input>
       <br><br>
+        <!-- Input du mot de passe -->
       <input type="password" placeholder= "Mot de passe" id="mdp" name="motdepasse" minlength= "8" maxlenght="16" required></input>
       <br><br>
+        <!-- Input du numéro de téléphone -->
       <input type="text" placeholder= "Téléphone" id="tel" name="telephone" required></input>
       <br><br>
+        <!-- Bouton envoyant les informations -->
       <button type="text" id="btn" name="post"><i class="bi bi-box-arrow-in-right"> Envoyer </i><i class="bi bi-box-arrow-in-left"></i></button>
     </form>
   </div>
 
+    <!-- Code PHP -->
   <?php
 
     if ($_POST){
@@ -159,7 +170,7 @@
   ?>
 
   <?php
-
+      // Importation des éléments recueillient dans table SQL 'contact'
     $pdo = new PDO('mysql:host=localhost;dbname=gtech', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     if ($_POST) {
     $pdo->exec("INSERT INTO contact (nom, prenom, email, motdepasse, telephone) VALUES ('$_POST[nom]', '$_POST[prenom]', '$_POST[email]', '$_POST[motdepasse]', '$_POST[telephone]')");

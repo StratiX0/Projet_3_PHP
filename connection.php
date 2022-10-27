@@ -1,3 +1,5 @@
+    <!-- Fichier reliant la page admin_login.php à la base de données sur PHPmyAdmin -->
+
 <?php
  
 $conn = "";

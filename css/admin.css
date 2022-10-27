@@ -1,20 +1,25 @@
+/* Style du body */
 body {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
 		Geneva, Verdana, sans-serif;
 }
 
+/* Style général de la table */
 .table {
 	text-align: center;
 }
 
+/*  Style de la rangée 0 : Nom des colonnes */
 thead {
 	background-color: rgba(0, 0, 0, 0.75);
 }
 
+/* Style de la colonne 0 : ID */
 #col1 {
 	background-color: rgba(30, 30, 30, 0.35);
 }
 
+/*  Style de la rangée 0 : Nom des colonnes */
 th {
 	border-width: 2px;
 	border-style: solid;
@@ -24,10 +29,12 @@ th {
 	font-weight: 900;
 }
 
+/* Style des cellules */
 .content {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* Style du contenu des cellules */
 td {
 	border-width: 2px;
 	border-style: solid;
@@ -36,6 +43,7 @@ td {
 	color: white;
 }
 
+/* Style/réglage de la vidéo d'arrière plan */
 #bgVideo {
 	position: fixed;
 	right: 0;

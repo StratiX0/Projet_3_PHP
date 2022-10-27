@@ -1,13 +1,16 @@
+/* Style du body */
 body {
 	margin: 0;
 	padding: 0;
 }
 
+/* Style du h1 */
 h1 {
 	text-align: center;
 	color: rgb(255, 255, 255);
 }
 
+/* Style du titre */
 .title {
 	position: static;
 	margin-top: 3rem;
@@ -17,6 +20,7 @@ h1 {
 	border-radius: 1rem;
 }
 
+/* Style du formulaire */
 .log {
 	text-align: center;
 	background-color: rgba(128, 128, 128, 0.6);
@@ -24,24 +28,28 @@ h1 {
 	border-radius: 1rem;
 }
 
+/* Style de la zone de texte de l'identifiant */
 #id {
 	border-radius: 10px;
 	text-align: center;
 	font-size: x-large;
 }
 
+/* Style de la zone de texte du mot de passe */
 #mdp {
 	border-radius: 10px;
 	text-align: center;
 	font-size: x-large;
 }
 
+/* Style du bouton envoyant les informations pour la connection */
 #btn {
 	border-radius: 10px;
 	text-align: center;
 	font-size: x-large;
 }
 
+/* Style/réglages de la vidéo d'arrière plan */
 #bgVideo {
 	position: absolute;
 	width: 100%;
@@ -49,6 +57,7 @@ h1 {
 	object-fit: cover;
 }
 
+/* Style du disclaimer de bas de page */
 .disclaimer {
 	background-color: dodgerblue;
 	color: whitesmoke;

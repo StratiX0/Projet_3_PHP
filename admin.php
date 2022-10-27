@@ -14,15 +14,18 @@
 	<link
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+        <!-- Intégration de la page de style css -->
     <link rel="stylesheet" href="css/admin.css"/>
     <title>Admin</title>
 </head>
 <body class="d-flex flex-column min-vh-100" >
 
+        <!-- Intégration de la vidéo d'arrière plan -->
     <video autoplay muted loop preload id="bgVideo">
   		<source src="video/adminBG.mp4" type="video/mp4">
 	</video>
-    
+  
+        <!-- Code PHP important le contenu de la table SQL -->
     <?php
 
     $pdo = new PDO('mysql:host=localhost;dbname=gtech', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
@@ -32,9 +35,10 @@
     ?>
 
 
-
+        <!-- Table -->
     <table class="table">
         <thead>
+                <!-- Rangée 0 : Nom des colonnes -->
             <tr>
                 <th>id</th>
                 <th>nom</th>
@@ -45,6 +49,7 @@
             </tr>
         </thead>
 
+            <!-- Code PHP affichant le contenu de la table SQL -->
         <?php
         foreach($d as $data)
         {

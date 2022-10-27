@@ -14,6 +14,7 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+				<!-- Force l'intégration de la page de style css -->
 			<style>
   				<?php include "css/admin_login.css" ?>
 			</style>
@@ -21,33 +22,39 @@
 </head>
 
 <body>
-
+		<!-- Importation de la vidéo d'arrière plan -->
 	<video autoplay muted loop preload id="bgVideo">
   		<source src="video/Admin_loginBG.mp4" type="video/mp4">
 	</video>
 	
+		<!-- Titre et la position avec bootstrap -->
 	<div class="title position-absolute top-0 start-50 translate-middle-x">
 		<h1>Page Admin</h1>
 	</div>
 
+		<!-- Div incluant le formulaire et la position avec bootstrap -->
 	<div class="log position-absolute top-50 start-50 translate-middle">
 		<!-- Formulaire -->
 		<form action="" method="post">
 
+			<!-- Input zone de texte de l'identifiant -->
 		<input type="text" placeholder= "Identifiant" name="identifiant" id="id" required></input>
 		<br><br>
+			<!-- Input zone de texte du mot de passe -->
 		<input type="password" placeholder= "Mot de passe" name="motdepasse" id="mdp" required></input>
 		<br><br>
+			<!-- Bouton envoyant les informations pour la connection -->
 		<button type="text" name="post" id="btn"> <i class="bi bi-box-arrow-in-right"></i> Se connecter <i class="bi bi-box-arrow-in-left"></i> </button>
 		</form>
 	</div>
 
+		<!-- Disclaimer de bas de page -->
 	<div class="disclaimer position-absolute bottom-0 start-50 translate-middle-x"><p>2022 - Page dédiée uniquement aux ADMINS</p></div>
 
 
 
 
-
+	<!-- Code PHP -->
 	<?php
 
 		include_once('connection.php');
